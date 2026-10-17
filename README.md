@@ -69,18 +69,3 @@ helm/heart-risk-api/  equivalent Helm chart   monitoring/  Prometheus + Grafana 
 .github/workflows/    ci.yml                  docs/        SETUP, architecture, VIDEO_SCRIPT
 data/ models/ reports/ screenshots/   (generated / evidence)
 ```
-
-## Deliverables checklist
-- [ ] `make data` run and `data/raw`, `data/processed` committed
-- [ ] `make train` run (models/ committed so `docker build` works on a fresh clone)
-- [ ] Pushed to GitHub, Actions green (+ one deliberate red run for the screenshot)
-- [ ] 15 screenshots in `screenshots/` (list: `screenshots/README.md`)
-- [ ] `make report` -> add your name, ID, repo URL, video link; export PDF
-- [ ] Video recorded (`docs/VIDEO_SCRIPT.md`)
-- [ ] Personalise (see below)
-
-## Make it yours
-This is a complete reference implementation; your submission should reflect your own choices and understanding.
-Things to change and be ready to explain: the engineered features in `features.py`, grids and candidate models in
-`modeling.py`, the random seed, risk bands, dashboard panels, resource limits, extra tests, and the wording of the report.
-Run everything yourself so every metric, figure and screenshot comes from *your* run.
