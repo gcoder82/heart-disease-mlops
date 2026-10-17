@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "API (uvicorn)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["heartrisk.api.app:app", "--port", "8000"],
+      "jinja": true
+    },
+    {
+      "name": "Train (quick)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "heartrisk.train",
+      "args": ["--quick", "--no-mlflow", "--cv-folds", "3"]
+    }
+  ]
+}

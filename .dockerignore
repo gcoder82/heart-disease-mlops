@@ -1,0 +1,7 @@
+*
+!src/
+!models/model.joblib
+!models/metadata.json
+!requirements-serve.txt
+**/__pycache__
+**/*.pyc

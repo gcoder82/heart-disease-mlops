@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heartrisk"
+version = "1.0.0"
+description = "End-to-end MLOps pipeline for heart-disease risk prediction (UCI Cleveland)."
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# Compact one-liner style is intentional in the report renderer / diagram drawing scripts.
+"scripts/build_report.py" = ["E701", "E702"]
+"scripts/make_architecture_diagram.py" = ["E501", "E702"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra -q"
+filterwarnings = ["ignore::DeprecationWarning"]

@@ -1,0 +1,6 @@
+Heart Risk API deployed as release "{{ .Release.Name }}".
+
+Docker Desktop (LoadBalancer):   curl http://localhost:{{ .Values.service.port }}/health
+Anywhere (port-forward):
+  kubectl port-forward svc/{{ include "heart-risk-api.fullname" . }} 8080:{{ .Values.service.port }}
+  curl http://localhost:8080/docs

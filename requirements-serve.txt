@@ -1,0 +1,12 @@
+# Minimal runtime needed to SERVE the model (used by the Dockerfile).
+# NOTE: numpy / pandas / scikit-learn versions must match the versions used for training,
+# because the model is stored as a joblib-pickled sklearn Pipeline.
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.13.1
+scikit-learn==1.5.2
+joblib==1.4.2
+fastapi==0.115.5
+pydantic==2.9.2
+uvicorn==0.32.1
+prometheus-client==0.21.0

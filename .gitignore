@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.egg-info/
+mlruns/
+mlartifacts/
+mlflow.db
+logs/
+.ipynb_checkpoints/
+.DS_Store
+reports/junit.xml

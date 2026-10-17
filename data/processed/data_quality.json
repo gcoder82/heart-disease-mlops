@@ -1,0 +1,14 @@
+{
+  "rows": 303,
+  "columns": 14,
+  "missing_by_column": {
+    "ca": 4,
+    "thal": 2
+  },
+  "class_counts": {
+    "0": 164,
+    "1": 139
+  },
+  "positive_rate": 0.4587,
+  "sha256": "e81973d3356c231ed8903aab16f5faa72d9679eb8ef6dc98a602b25df3f5d23d"
+}

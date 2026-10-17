@@ -1,0 +1,34 @@
+replicaCount: 2
+
+image:
+  repository: heart-risk-api   # cloud: ghcr.io/<user>/heart-risk-api
+  tag: "1.0.0"
+  pullPolicy: IfNotPresent
+
+logLevel: INFO
+
+service:
+  type: LoadBalancer           # Docker Desktop -> localhost:80 ; Minikube -> `minikube tunnel`
+  port: 80
+
+ingress:
+  enabled: false
+  className: nginx
+  host: heart-risk.local
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 70
+
+podDisruptionBudget:
+  enabled: true
+  minAvailable: 1
+
+resources:
+  requests: {cpu: 100m, memory: 256Mi}
+  limits: {cpu: 500m, memory: 512Mi}
+
+metrics:
+  scrape: true                 # adds prometheus.io/* annotations
