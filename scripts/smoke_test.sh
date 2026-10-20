@@ -30,6 +30,7 @@ CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST "$BASE_URL/predict" \
 [ "$CODE" = "422" ] || fail "invalid payload should give 422, got $CODE"
 pass "invalid payload rejected with 422"
 
-curl -fsS "$BASE_URL/metrics" | grep -q 'heart_api_requests_total' || fail "/metrics"
+curl -fsS "$BASE_URL/metrics" -o /tmp/heart-risk-metrics.txt || fail "/metrics request"
+grep -q "heart_api_requests_total" /tmp/heart-risk-metrics.txt || fail "/metrics content"
 pass "GET /metrics exposes Prometheus counters"
 echo "All smoke tests passed."

@@ -20,7 +20,7 @@ import io
 import shutil
 import ssl
 import sys
-import pandas
+#import pandas
 import time
 import urllib.request
 import zipfile

@@ -26,11 +26,11 @@ case "$CTX" in
     ;;
 esac
 
-kubectl apply -k k8s
-kubectl apply -k k8s/monitoring
-kubectl -n heart-risk rollout status deploy/heart-risk-api --timeout=180s
-kubectl -n heart-risk rollout status deploy/prometheus --timeout=180s
-kubectl -n heart-risk rollout status deploy/grafana --timeout=180s
+minikube kubectl apply -k k8s
+minikube kubectl apply -k k8s/monitoring
+minikube kubectl -n heart-risk rollout status deploy/heart-risk-api --timeout=180s
+minikube kubectl -n heart-risk rollout status deploy/prometheus --timeout=180s
+minikube kubectl -n heart-risk rollout status deploy/grafana --timeout=180s
 
 echo
 kubectl -n heart-risk get pods,svc,ingress,hpa

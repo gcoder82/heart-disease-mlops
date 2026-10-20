@@ -1,0 +1,10 @@
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+{"ts": "2026-10-20T17:31:25.589+00:00", "level": "INFO", "logger": "heartrisk.api", "message": "model loaded", "event": "startup", "model_name": "logistic_regression", "model_version": "1.0.0-ae6fea28"}
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+{"ts": "2026-10-20T17:31:26.896+00:00", "level": "INFO", "logger": "heartrisk.api", "message": "request", "event": "request", "request_id": "7ca4f99eeacc4adc866e375ca418b26c", "method": "GET", "path": "/ready", "status": 200, "duration_ms": 2.12, "client": "172.17.0.1"}
+{"ts": "2026-10-20T17:31:26.911+00:00", "level": "INFO", "logger": "heartrisk.api", "message": "request", "event": "request", "request_id": "16f5db69fae241eb954f68d392f43204", "method": "GET", "path": "/health", "status": 200, "duration_ms": 1.65, "client": "172.17.0.1"}
+{"ts": "2026-10-20T17:31:26.966+00:00", "level": "INFO", "logger": "heartrisk.api", "message": "prediction", "event": "prediction", "request_id": "e1db1a17202d4d27a863861e3636e70b", "prediction": 0, "probability_disease": 0.3069, "risk_level": "low", "model_version": "1.0.0-ae6fea28"}
+{"ts": "2026-10-20T17:31:26.967+00:00", "level": "INFO", "logger": "heartrisk.api", "message": "request", "event": "request", "request_id": "e1db1a17202d4d27a863861e3636e70b", "method": "POST", "path": "/predict", "status": 200, "duration_ms": 31.15, "client": "172.17.0.1"}
+{"ts": "2026-10-20T17:31:27.006+00:00", "level": "INFO", "logger": "heartrisk.api", "message": "request", "event": "request", "request_id": "0eb0432df25e4ecf9703a6bf2137102d", "method": "POST", "path": "/predict", "status": 422, "duration_ms": 1.95, "client": "172.17.0.1"}

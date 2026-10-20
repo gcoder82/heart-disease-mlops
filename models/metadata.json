@@ -1,8 +1,8 @@
 {
   "model_name": "logistic_regression",
-  "model_version": "1.0.0-479eb486",
-  "trained_at_utc": "2026-10-17T09:47:24+00:00",
-  "git_commit": "unknown",
+  "model_version": "1.0.0-ae6fea28",
+  "trained_at_utc": "2026-10-20T17:30:30+00:00",
+  "git_commit": "5bef324",
   "seed": 42,
   "best_params": {
     "C": 0.3,
@@ -46,7 +46,7 @@
       "test_roc_auc": 0.9621212121212122
     },
     "random_forest": {
-      "grid_best_cv_roc_auc": 0.8951341733950429,
+      "grid_best_cv_roc_auc": 0.8961572244180939,
       "cv_accuracy_mean": 0.7930272108843537,
       "cv_accuracy_std": 0.0739597479054729,
       "cv_precision_mean": 0.7932363517489376,
@@ -55,8 +55,8 @@
       "cv_recall_std": 0.09863541132472842,
       "cv_f1_mean": 0.7638868435484876,
       "cv_f1_std": 0.08782021770072283,
-      "cv_roc_auc_mean": 0.8842195646543474,
-      "cv_roc_auc_std": 0.0579214182937858,
+      "cv_roc_auc_mean": 0.8841891602761167,
+      "cv_roc_auc_std": 0.05869057487114579,
       "test_accuracy": 0.9016393442622951,
       "test_precision": 0.8666666666666667,
       "test_recall": 0.9285714285714286,
@@ -197,7 +197,7 @@
     }
   },
   "library_versions": {
-    "python": "3.11.17",
+    "python": "3.12.9",
     "scikit-learn": "1.5.2",
     "pandas": "2.2.3",
     "numpy": "1.26.4"
